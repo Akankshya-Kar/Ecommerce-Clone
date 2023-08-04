@@ -56,34 +56,6 @@
 
 <h5 style="margin: -3px 0 -12px 17px; color: rgb(53, 53, 53) ; font-weight: 300">PRODUCTS</h5>
 <hr />
-@*<div class="product-cards">
-
-
-        @foreach (var item in Model.ListOfProducts)
-        {
-            <div class="card" style="width: 18rem;">
-                <img src="~/ProductImages/@item.ProductImage" class="card-img-top" alt="Product Image Here" />
-                <div class="card-body">
-                    <h5 class="card-text">@item.ProductName</h5>
-                    <p class="card-text">@item.Price</p>
-                    @if (item.Quantity > 0)
-                    {
-                        <p class="card-text">Available</p>
-                    }
-                    else
-                    {
-                        <p class="card-text">Not Available</p>
-                    }
-
-                    @if (item.IsFeatured == true)
-                    {
-                        <div style="color:aliceblue; border-radius:5px; background-color:rgb(53, 53, 53); text-align:center; padding: 4px 8px;">New</div>
-                    }
-                </div>
-            </div>
-        }
-
-    </div>*@
 
 <style>
     .row {
