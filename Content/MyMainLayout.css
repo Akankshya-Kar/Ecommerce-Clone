@@ -1,0 +1,227 @@
+﻿@import url(font-awesome.css);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
+
+body {
+    margin: 0;
+    padding-bottom: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #333;
+    background: #fff;
+    overflow-x: hidden;
+    scrollbar-face-color: #121212;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.logo {
+    margin-bottom: 40px;
+}
+
+    .logo h1,
+    .logo h2 {
+        margin: 5px 0 5px;
+        text-align: left;
+        font-size: 32px;
+        line-height: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+    }
+
+        .logo h1 span,
+        .logo h2 span {
+            font-weight: 300;
+        }
+
+        .logo h1 a,
+        .logo h2 a {
+            color: #333;
+            text-decoration: none;
+            -webkit-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            -moz-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            /* -ms-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;*/
+            -o-transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+            transition: color 0.3s ease-in-out, text-decoration 0.5s ease-in-out;
+        }
+
+            .logo h1 a:hover,
+            .logo h2 a:hover {
+                color: #888;
+            }
+
+/*.flashing-text {
+    font-size: 24px;
+    font-family: fangsong;
+    color: slategrey;
+    animation: flashing 1s infinite;
+    margin-inline: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+@keyframes flashing {
+    0% {
+        opacity: 1;
+    }*/
+/* At the beginning (0%), the text is fully visible (opacity: 1) */
+/*50% {
+        opacity: 0;
+    }*/
+/* At the middle (50%), the text is invisible (opacity: 0) */
+/*100% {
+        opacity: 1;
+    }*/
+/* At the end (100%), the text is fully visible again (opacity: 1) */
+/*}
+
+.flashing-text:hover {
+    color: #fff;
+    animation: none;
+    background-color: burlywood;
+    border: ridge;
+    border-bottom-width: thick;
+    border-color: burlywood;
+}
+
+.flashing-text:active {
+    transform: scale(0.50);
+}*/
+
+
+.d-flex {
+    margin: 0px 0px 0px 0px;
+}
+
+.col-md-6 {
+    margin: 4px -55px -38px 16px;
+}
+
+.account {
+    text-align: right;
+}
+
+    .account a {
+        color: #333;
+        text-decoration: none;
+    }
+
+        .account a:hover {
+            color: #373737;
+            text-decoration: none;
+        }
+
+    .account h4 {
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .account ul {
+        list-style-type: none;
+        margin-left: -20px;
+        float: right;
+        margin: 8px -24px 2px 0px;
+    }
+
+        .account ul > li {
+            float: left;
+            margin: -8px 1px 0px 22px;
+        }
+
+            .account ul > li:nth-child(1),
+            .account ul > #your-account {
+                border-right: 1px solid #333;
+                padding-right: 17px;
+            }
+
+
+.nav-menus {
+    border-top: 2px solid #333;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.active {
+    background: transparent;
+    color: #333;
+}
+
+    .active:hover {
+        background: #eaeaea;
+        color: #333;
+    }
+
+.menu {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.nav-menus .nav-pills > .active > a,
+.nav-menus .nav-pills > .active > a:hover,
+.nav-menus .nav-pills > .active > a:focus {
+    background: #333;
+    color: #fff;
+}
+
+ul.button-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    ul.button-list li {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: lightslategrey; /* Set your desired button background color */
+        color: #fff; /* Set your desired button text color */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        ul.button-list li:hover {
+            background-color: #0056b3; /* Set your desired hover background color */
+        }
+
+        ul.button-list li:active {
+            background-color: #003e80; /* Set your desired active background color */
+        }
+
+/*.olSearch {
+    width: 100%;
+    display: flex;
+
+}
+
+    .olSearch .inputComn {
+        margin-bottom: 0;
+    }
+
+.inputComn {
+    color: black;
+    font-size: 14px;
+    height: 44px;
+    width: 100%;
+    cursor: pointer;
+    padding: 0 15px;
+}
+*/
+
+.product-cards {
+    display: flex;
+}

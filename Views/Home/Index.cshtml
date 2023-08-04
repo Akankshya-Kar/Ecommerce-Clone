@@ -1,0 +1,154 @@
+﻿@model E_Commerce.Models.Home.HomeIndexViewModel
+@*@using PagedList;
+@using PagedList.Mvc;*@
+
+@{
+    ViewBag.Title = "Home Page";
+}                       
+
+ <form method="post" class="d-flex" role="search" style=" margin: 5px 6px 5px 6px;">
+    <input class="form-control me-2" type="text" placeholder="Search Product / Category" aria-label="Search" name="search">
+    <button class="btn btn-outline-dark" type="submit" style="font-weight:200">
+        Search
+    </button>
+</form>
+@*Carousel*@
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+            <img src="https://marketplace.canva.com/EAFED0hv9G0/1/0/1600w/canva-blue-pink-modern-special-offer-sale-banner-J5VkNReQ8WA.jpg" class="d-block w-100" alt="..." style="width:100%; height:400px">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <img src="https://st4.depositphotos.com/6923920/41187/i/450/depositphotos_411876658-stock-photo-fashion-sale-banner-design-template.jpg" class="d-block w-100" alt="..." style="width:100%; height:400px">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCzP6XHAtuoLgQgMfDDThrA-KHDk2Z4iC09fPrBHY9bPUtnUK68RqUkC7cGujQXXp1u9M&usqp=CAU" class="d-block w-100" alt="..." style="width:100%; height:400px">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<hr />
+
+<h5 style="margin: -3px 0 -12px 17px; color: rgb(53, 53, 53) ; font-weight: 300">PRODUCTS</h5>
+<hr />
+@*<div class="product-cards">
+
+
+        @foreach (var item in Model.ListOfProducts)
+        {
+            <div class="card" style="width: 18rem;">
+                <img src="~/ProductImages/@item.ProductImage" class="card-img-top" alt="Product Image Here" />
+                <div class="card-body">
+                    <h5 class="card-text">@item.ProductName</h5>
+                    <p class="card-text">@item.Price</p>
+                    @if (item.Quantity > 0)
+                    {
+                        <p class="card-text">Available</p>
+                    }
+                    else
+                    {
+                        <p class="card-text">Not Available</p>
+                    }
+
+                    @if (item.IsFeatured == true)
+                    {
+                        <div style="color:aliceblue; border-radius:5px; background-color:rgb(53, 53, 53); text-align:center; padding: 4px 8px;">New</div>
+                    }
+                </div>
+            </div>
+        }
+
+    </div>*@
+
+<style>
+    .row {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .col {
+        flex: 0 0 auto;
+    }
+</style>
+
+<div class="container">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+        @foreach (var item in Model.ListOfProducts)
+        {
+            <div class="col mb-4">
+                <div class="product-card card h-100">
+                    <img src="~/ProductImages/@item.ProductImage" class="card-img-top" style="cursor:pointer; height:160px;">
+                    <div class="card-body">
+                        <hr />
+                        <h5 class="card-text">@item.ProductName</h5>
+                        <p class="card-text">@item.Price</p>
+                        @if (item.Quantity > 0)
+                        {
+                            <p class="card-text">Available</p>
+                        }
+                        else
+                        {
+                            <p class="card-text">Not Available</p>
+                        }
+
+                        @if (item.IsFeatured == true)
+                        {
+                            <div style="color:aliceblue; border-radius:5px; background-color:rgb(53, 53, 53); text-align:center; padding: 4px 8px;">New</div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="product-card card h-100">
+                    <img src="~/ProductImages/@item.ProductImage" class="card-img-top" style="cursor:pointer; height:160px;">
+                    <div class="card-body">
+                        <hr />
+                        <h5 class="card-text">@item.ProductName</h5>
+                        <p class="card-text">@item.Price</p>
+                        @if (item.Quantity > 0)
+                        {
+                            <p class="card-text">Available</p>
+                        }
+                        else
+                        {
+                            <p class="card-text">Not Available</p>
+                        }
+
+                        @if (item.IsFeatured == true)
+                        {
+                            <div style="color:aliceblue; border-radius:5px; background-color:rgb(53, 53, 53); text-align:center; padding: 4px 8px;">New</div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+        <br />
+        @*@Html.PagedListPager(Model.ListOfProducts, page => Url.Action("Index", new { page, search = Request.QueryString["search"] }))*@
+    </div>
+</div>
