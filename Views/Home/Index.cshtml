@@ -1,12 +1,12 @@
 ﻿@model E_Commerce.Models.Home.HomeIndexViewModel
 @*@using PagedList;
-@using PagedList.Mvc;*@
+    @using PagedList.Mvc;*@
 
 @{
     ViewBag.Title = "Home Page";
-}                       
+}
 
- <form method="post" class="d-flex" role="search" style=" margin: 5px 6px 5px 6px;">
+<form method="post" class="d-flex" role="search" style=" margin: 5px 6px 5px 6px;">
     <input class="form-control me-2" type="text" placeholder="Search Product / Category" aria-label="Search" name="search">
     <button class="btn btn-outline-dark" type="submit" style="font-weight:200">
         Search
@@ -61,7 +61,7 @@
     .row {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
+        overflow-x:clip;
     }
 
     .col {
@@ -70,18 +70,22 @@
 </style>
 
 <div class="container">
-    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 ">
         @foreach (var item in Model.ListOfProducts)
         {
             <div class="col mb-4">
-                <div class="product-card card h-100">
+                <div class="product-card card h-100 position-relative">
                     <img src="~/ProductImages/@item.ProductImage" class="card-img-top" style="cursor:pointer; height:160px;">
                     <div class="card-body">
                         <hr />
-                        <h5 class="card-text">@item.ProductName</h5>
-                        <p class="card-text">@item.Price</p>
+                        <h5 class="card-text" style=" text-align: center; color:rgb(133, 114, 75)">@item.ProductName</h5>
+                        <p class="card-text" style=" text-align: center; font-weight:500;">₹@item.Price</p>
                         @if (item.Quantity > 0)
                         {
+                            using (Html.BeginForm("AddToCart", "Home", new { productId = item.ProductId }, FormMethod.Post))
+                            {
+                                <button type="submit" class="pull-right"><i class="fa fa-shopping-cart"></i></button>
+                            }
                             <p class="card-text">Available</p>
                         }
                         else
@@ -91,31 +95,9 @@
 
                         @if (item.IsFeatured == true)
                         {
-                            <div style="color:aliceblue; border-radius:5px; background-color:rgb(53, 53, 53); text-align:center; padding: 4px 8px;">New</div>
-                        }
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="product-card card h-100">
-                    <img src="~/ProductImages/@item.ProductImage" class="card-img-top" style="cursor:pointer; height:160px;">
-                    <div class="card-body">
-                        <hr />
-                        <h5 class="card-text">@item.ProductName</h5>
-                        <p class="card-text">@item.Price</p>
-                        @if (item.Quantity > 0)
-                        {
-                            <p class="card-text">Available</p>
-                        }
-                        else
-                        {
-                            <p class="card-text">Not Available</p>
-                        }
-
-                        @if (item.IsFeatured == true)
-                        {
-                            <div style="color:aliceblue; border-radius:5px; background-color:rgb(53, 53, 53); text-align:center; padding: 4px 8px;">New</div>
-                        }
+                            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                <span class="visually-hidden">New alerts</span>
+                            </span>       }
                     </div>
                 </div>
             </div>
