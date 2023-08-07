@@ -6,10 +6,11 @@ using System.Web;
 
 namespace E_Commerce.Repository
 {
-    public class GenericUnitOfWork:IDisposable
+    public class GenericUnitOfWork : IDisposable
     {
-        private ECommerceEntities DBEntity = new ECommerceEntities();
-        public IRepository<Tbl_EntityType>GetRepositoryInstance<Tbl_EntityType>() where Tbl_EntityType : class
+        public ECommerceEntities DBEntity { get; } = new ECommerceEntities();
+
+        public IRepository<Tbl_EntityType> GetRepositoryInstance<Tbl_EntityType>() where Tbl_EntityType : class
         {
             return new GenericRepository<Tbl_EntityType>(DBEntity);
         }
@@ -21,9 +22,9 @@ namespace E_Commerce.Repository
 
         protected virtual void Dispose(bool disposing)
         {
-            if(!this.disposed)
+            if (!this.disposed)
             {
-                if(disposing)
+                if (disposing)
                 {
                     DBEntity.Dispose();
                 }

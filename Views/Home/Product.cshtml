@@ -1,0 +1,30 @@
+﻿@model E_Commerce.Data.Tbl_Product
+
+@{
+    ViewBag.Title = "Product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h4> @Html.DisplayFor(model => model.ProductName)</h4>
+    <hr />
+<div class="card mb-3" style=" align-items: center;">
+  <img src="~/ProductImages/@Model.ProductImage" class="card-img-top" style=" height: 40%; width: 40%; }">
+  <div class="card-body" style=" text-align-last: center;">
+      <h5 class="card-title"> @Html.DisplayFor(model => model.ProductName)</h5>
+      <p class="card-text"> ₹@Html.DisplayFor(model => model.Price)</p>
+    <p class="card-text"><small class="text-muted">...</small></p>
+  </div>
+</div>
+<div style="text-align-last: center; ">
+@if (Model.Quantity > 0)
+{
+    using (Html.BeginForm("AddToCart", "Home", new { productId = Model.ProductId }, FormMethod.Post))
+    {
+        <button type="submit" class="btn btn-primary">Add to Cart</button>
+    }
+}
+else
+{
+    <p class="card-text">Not Available</p>
+}
+    </div>

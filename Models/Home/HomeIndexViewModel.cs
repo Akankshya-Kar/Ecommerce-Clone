@@ -22,6 +22,12 @@ namespace E_Commerce.Models.Home
         ECommerceEntities context = new ECommerceEntities();
 
         public IPagedList<Tbl_Product> ListOfProducts { get; set; }
+        public List<Tbl_Category> ListOfCategories { get; set; }
+
+        public HomeIndexViewModel()
+        {
+            ListOfCategories = _unitOfWork.DBEntity.Tbl_Category.ToList();
+        }
 
         public HomeIndexViewModel CreateModel(string search, int pageSize, int? page)
         {

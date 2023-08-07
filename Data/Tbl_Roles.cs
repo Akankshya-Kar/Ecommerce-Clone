@@ -14,7 +14,14 @@ namespace E_Commerce.Data
     
     public partial class Tbl_Roles
     {
+        public Tbl_Roles()
+        {
+            this.Tbl_MemberRole = new HashSet<Tbl_MemberRole>();
+        }
+    
         public int RoleId { get; set; }
         public string RoleName { get; set; }
+    
+        public virtual ICollection<Tbl_MemberRole> Tbl_MemberRole { get; set; }
     }
 }

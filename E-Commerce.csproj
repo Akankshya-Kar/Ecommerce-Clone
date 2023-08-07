@@ -157,9 +157,6 @@
     <Compile Include="Data\Tbl_Cart.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Tbl_CartStatus.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\Tbl_Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -175,20 +172,17 @@
     <Compile Include="Data\Tbl_Roles.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Tbl_ShippingDetails.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Tbl_SlideImage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CategoryDetail.cs" />
     <Compile Include="Models\Home\HomeIndexViewModel.cs" />
     <Compile Include="Models\Home\Item.cs" />
+    <Compile Include="Models\LayoutViewModel.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Shopping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\UserRoleProvider.cs" />
     <Compile Include="Repository\GenericRepository.cs" />
     <Compile Include="Repository\GenericUnitOfWork.cs" />
     <Compile Include="Repository\IRepository.cs" />
@@ -203,8 +197,10 @@
     <Content Include="AdminSide\js\datatables-simple-demo.js" />
     <Content Include="AdminSide\js\scripts.js" />
     <Content Include="Content\MyMainLayout.css" />
+    <Content Include="Content\orderplaced.jpg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Screenshot 2023-08-05 173836.jpg.png" />
+    <Content Include="Content\Screenshot 2023-08-07 031339.png" />
     <Content Include="Data\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -261,6 +257,11 @@
     <Content Include="Views\Admin\CategoryEdit.cshtml" />
     <Content Include="Views\Home\Checkout.cshtml" />
     <Content Include="Views\Home\CheckoutDetails.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Home\OrderPlaced.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

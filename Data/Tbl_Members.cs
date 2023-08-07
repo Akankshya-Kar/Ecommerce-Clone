@@ -11,24 +11,18 @@ namespace E_Commerce.Data
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Tbl_Members
     {
         public Tbl_Members()
         {
-            this.Tbl_ShippingDetails = new HashSet<Tbl_ShippingDetails>();
+            this.Tbl_MemberRole = new HashSet<Tbl_MemberRole>();
         }
-    
+
         public int MemberId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string EmailId { get; set; }
         public string Password { get; set; }
-        public Nullable<bool> IsActive { get; set; }
-        public Nullable<bool> IsDelete { get; set; }
-        public Nullable<System.DateTime> CreatedOn { get; set; }
-        public Nullable<System.DateTime> ModifiedOn { get; set; }
-    
-        public virtual ICollection<Tbl_ShippingDetails> Tbl_ShippingDetails { get; set; }
+        public string Username { get; set; }
+
+        public virtual ICollection<Tbl_MemberRole> Tbl_MemberRole { get; set; }
     }
 }

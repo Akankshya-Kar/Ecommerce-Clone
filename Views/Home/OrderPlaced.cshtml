@@ -1,0 +1,21 @@
+﻿@using E_Commerce.Models.Home;
+@{
+    ViewBag.Title = "OrderPlaced";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<br />
+<hr />
+
+<div style=" text-align-last: center; ">
+    <h2>Your Order Has Been Placed Successfuly !</h2>
+
+    <a class="btn btn-success" href="@Url.Action("Index","Home")">Continue Shopping</a>
+    <br />
+
+    <img src="~/Content/orderplaced.jpg" style="width:50%;" />
+</div>
+
+
+<hr />

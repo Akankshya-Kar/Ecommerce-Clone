@@ -24,7 +24,7 @@ h6 {
 
 
 .logo {
-    margin-bottom: 40px;
+    margin-right: 22px;
 }
 
     .logo h1,
@@ -58,6 +58,7 @@ h6 {
             .logo h2 a:hover {
                 color: #888;
             }
+
 
 /*.flashing-text {
     font-size: 24px;
@@ -105,45 +106,6 @@ h6 {
 .col-md-6 {
     margin: 4px -55px -38px 16px;
 }
-
-.account {
-    text-align: right;
-}
-
-    .account a {
-        color: #333;
-        text-decoration: none;
-    }
-
-        .account a:hover {
-            color: #373737;
-            text-decoration: none;
-        }
-
-    .account h4 {
-        font-weight: 600;
-        text-transform: uppercase;
-        line-height: 20px;
-        margin-bottom: 10px;
-    }
-
-    .account ul {
-        list-style-type: none;
-        margin-left: -20px;
-        float: right;
-        margin: 8px -24px 2px 0px;
-    }
-
-        .account ul > li {
-            float: left;
-            margin: -8px 1px 0px 22px;
-        }
-
-            .account ul > li:nth-child(1),
-            .account ul > #your-account {
-                border-right: 1px solid #333;
-                padding-right: 17px;
-            }
 
 
 .nav-menus {
@@ -224,4 +186,27 @@ ul.button-list {
 
 .product-cards {
     display: flex;
+}
+
+.width45 {
+    width: 45%;
+}
+
+.margin-right5 {
+    margin-right: 5%;
+}
+
+.margin-left7 {
+    margin-left: 7%;
+}
+
+.txt-decor-none {
+    text-decoration: none;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: var(--bs-navbar-nav-link-padding-x);
+    padding-left: var(--bs-navbar-nav-link-padding-x);
+    padding-bottom: 0px;
+    margin: -8px 0px 0px 0px;
 }

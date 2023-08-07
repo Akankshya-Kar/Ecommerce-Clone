@@ -11,6 +11,7 @@ using System.Web.Mvc;
 
 namespace E_Commerce.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         // GET: Admin

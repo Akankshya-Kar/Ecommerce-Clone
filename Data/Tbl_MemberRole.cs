@@ -17,5 +17,8 @@ namespace E_Commerce.Data
         public int MemberRoleId { get; set; }
         public Nullable<int> MemberId { get; set; }
         public Nullable<int> RoleId { get; set; }
+    
+        public virtual Tbl_Roles Tbl_Roles { get; set; }
+        public virtual Tbl_Members Tbl_Members { get; set; }
     }
 }
