@@ -23,7 +23,7 @@ namespace E_Commerce.Controllers
             return View(model.CreateModel(search, 4, page));
         }
 
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "Admin,User")]
         public ActionResult AddToCart(int productId)
         {
             if (Session["cart"] == null || ((List<Item>)Session["cart"]).Count == 0)

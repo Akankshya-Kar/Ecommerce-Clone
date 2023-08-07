@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="container">
 
 <h2>Your Cart</h2>
 @if (Session["cart"] == null)
@@ -44,7 +45,9 @@ else
     </table>
     if (((List<Item>)Session["cart"]).Any())
     {
-        <a class="btn btn-success" href="@Url.Action("CheckoutDetails","Home")">Checkout >></a>
+        <a class="btn btn-secondary" href="@Url.Action("CheckoutDetails","Home")">Checkout</a>
     }
 
 }
+
+</div>
